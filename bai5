@@ -1,0 +1,15 @@
+import java.util.function.*;
+
+public class Bai5 {
+    public static void main(String[] args) {
+
+        Supplier<Double> supplier = () -> Math.random() * 100;
+
+        Consumer<Double> consumer =
+                n -> System.out.println("Số may mắn: " + n);
+
+        double number = supplier.get();
+
+        consumer.accept(number);
+    }
+}
